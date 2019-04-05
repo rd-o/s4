@@ -34,8 +34,10 @@ To easily install the dependencies, test and execute the project.
 A GlobalExceptionHandler class declared, in here can declare methods to handle 
 several types of Exceptions.
 
-In the class it was declared ```handleHttpMessageNotReadableException``` method, and it
-is capable to handle the cause exception like ```JsonMappingException```.
+In the class it was declared a ```handleHttpMessageNotReadableException``` method, and it
+is capable to handle the cause exception like ```JsonMappingException```. Please note in the
+ the section of selecting the exception cause, there are actions commented, these need to be 
+implemented.
 
 The following output show how the exception is handled and shows the custom message: 
 "Please check your request"

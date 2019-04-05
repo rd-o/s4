@@ -50,6 +50,9 @@ Connection: close
 {"timestamp":"2019-04-05T16:33:24.388+0000","status":400,"error":"Bad Request","message":"Please check your request","path":"/student"}
 ~~~~
 
+### Unit tests
+Two unit test for Student Repository were added to ```StudentRepositoryTest``` class
+
 ### Project usage
 #### Run the project
 

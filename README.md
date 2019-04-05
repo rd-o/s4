@@ -138,3 +138,9 @@ $ curl http://localhost:8080/class/2/students
 ~~~~
 $ curl http://localhost:8080/student/1/classModels
 ~~~~
+
+#### Edit an already created class
+~~~~
+$ curl -H 'Content-Type: application/json' -X PUT -d '{"code" : "CAL111", "title" : "A description 11", "description" : "Calculus 111"}' http://localhost:8080/class/2
+~~~~
+

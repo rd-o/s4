@@ -7,7 +7,7 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 import java.util.List;
 
-@RepositoryRestResource(collectionResourceRel = "classModel", path = "class")
+@RepositoryRestResource(collectionResourceRel = "classModel", path = "classes")
 public interface ClassModelRepository extends PagingAndSortingRepository<ClassModel, Long> {
     List<ClassModel> findAll();
 

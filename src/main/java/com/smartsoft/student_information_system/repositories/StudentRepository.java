@@ -1,6 +1,6 @@
-package com.example.s4.repositories;
+package com.smartsoft.student_information_system.repositories;
 
-import com.example.s4.models.Student;
+import com.smartsoft.student_information_system.models.Student;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;

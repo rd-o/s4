@@ -1,4 +1,4 @@
-package com.example.s4.exceptions;
+package com.smartsoft.student_information_system.exceptions;
 
 import org.springframework.http.HttpStatus;
 

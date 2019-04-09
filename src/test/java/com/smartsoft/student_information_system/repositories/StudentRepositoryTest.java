@@ -1,7 +1,7 @@
-package com.example.s4.repositories;
+package com.smartsoft.student_information_system.repositories;
 
-import com.example.s4.models.ClassModel;
-import com.example.s4.models.Student;
+import com.smartsoft.student_information_system.models.ClassModel;
+import com.smartsoft.student_information_system.models.Student;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -1,4 +1,4 @@
-package com.example.s4;
+package com.smartsoft.student_information_system;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class S4ApplicationTests {
+public class StudentInformationSystemApplicationTests {
 
 	@Test
 	public void contextLoads() {

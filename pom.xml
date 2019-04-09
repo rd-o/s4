@@ -8,11 +8,11 @@
 		<version>2.1.4.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.example</groupId>
-	<artifactId>s4</artifactId>
+	<groupId>com.smartsoft</groupId>
+	<artifactId>student_information_system</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>s4</name>
-	<description>S4 project</description>
+	<name>Student Information System</name>
+	<description>A management information system for education establishments to manage student data.</description>
 
 	<properties>
 		<java.version>1.8</java.version>

@@ -1,13 +1,13 @@
-package com.example.s4;
+package com.smartsoft.student_information_system;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class S4Application {
+public class StudentInformationSystemApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(S4Application.class, args);
+		SpringApplication.run(StudentInformationSystemApplication.class, args);
 	}
 
 }

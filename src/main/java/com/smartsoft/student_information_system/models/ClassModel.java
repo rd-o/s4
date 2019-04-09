@@ -1,4 +1,4 @@
-package com.example.s4.models;
+package com.smartsoft.student_information_system.models;
 
 import javax.persistence.*;
 import java.util.List;

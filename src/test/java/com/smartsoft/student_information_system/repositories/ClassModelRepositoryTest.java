@@ -96,7 +96,7 @@ public class ClassModelRepositoryTest {
     }
 
     @Test(expected = ConstraintViolationException.class)
-    public void shouldCheckLastNameMinSize(){
+    public void shouldCheckIfClassCodeFormatIsValid(){
         classModel = new ClassModel();
         classModel.setCode(INVALID_CLASS_CODE);
 

@@ -55,7 +55,7 @@ Connection: close
 ~~~~
 
 ### Unit tests
-Two unit test for Student Repository were added to ```StudentRepositoryTest``` class
+There are unit test to test the method from StudentRepository and ClassModelRepository. The unit tests check that the methods repository are retrieving the data, saving the data and updating the data. The other type of unit tests check if the models are validating their attributes.
 
 ### Project usage
 #### Run the project

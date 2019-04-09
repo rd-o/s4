@@ -1,8 +1,8 @@
-INSERT INTO class_model VALUES (1, 'CAL101', 'Calculus 101', 'A description 1'); 
-INSERT INTO class_model VALUES (2, 'CAL102', 'Calculus 102', 'A description 2'); 
-INSERT INTO class_model VALUES (3, 'CAL103', 'Calculus 103', 'A description 3'); 
-INSERT INTO class_model VALUES (4, 'CAL104', 'Calculus 104', 'A description 4'); 
-INSERT INTO class_model VALUES (5, 'CAL105', 'Calculus 105', 'A description 5'); 
+INSERT INTO class_model VALUES (1, 'CAL101', 'A description 1', 'Calculus 101');
+INSERT INTO class_model VALUES (2, 'CAL102', 'A description 2', 'Calculus 102');
+INSERT INTO class_model VALUES (3, 'CAL103', 'A description 3', 'Calculus 103');
+INSERT INTO class_model VALUES (4, 'CAL104', 'A description 4', 'Calculus 104');
+INSERT INTO class_model VALUES (5, 'CAL105', 'A description 5', 'Calculus 105');
 
 INSERT INTO student VALUES (1, 'John', 'Smith', 123); 
 INSERT INTO student VALUES (2, 'Oliver', 'Williams', 124); 

@@ -1,6 +1,11 @@
+/*
+ * Copyright (c) 2019. SmartSoft
+ */
+
 package com.smartsoft.student_information_system.models;
 
 import javax.persistence.*;
+import javax.validation.constraints.Size;
 import java.util.List;
 
 @Entity
@@ -10,10 +15,13 @@ public class Student {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
 
+    @Column(unique = true)
     Long studentId;
 
+    @Size(min = 3, max = 50)
     String lastName;
 
+    @Size(min = 3, max = 50)
     String firstName;
 
     @ManyToMany(cascade = CascadeType.ALL)

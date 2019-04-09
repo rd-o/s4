@@ -1,6 +1,11 @@
+/*
+ * Copyright (c) 2019. SmartSoft
+ */
+
 package com.smartsoft.student_information_system.models;
 
 import javax.persistence.*;
+import javax.validation.constraints.Pattern;
 import java.util.List;
 
 @Entity
@@ -9,6 +14,7 @@ public class ClassModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
 
+    @Pattern(regexp = "^[A-Z]{3}\\d{3}$")
     String code;
 
     String title;

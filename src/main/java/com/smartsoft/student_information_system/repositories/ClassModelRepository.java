@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2019. SmartSoft
+ */
+
 package com.smartsoft.student_information_system.repositories;
 
 import com.smartsoft.student_information_system.models.ClassModel;

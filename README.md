@@ -1,4 +1,6 @@
-# s4
+# Student information system
+
+A management information system for education establishments to manage student data.
 
 ### Technologies used in the project
 
@@ -42,14 +44,14 @@ implemented.
 The following output show how the exception is handled and shows the custom message: 
 "Please check your request"
 ~~~~
-curl -i -X POST -H "Content-Type:application/json" -d '{"studentId": "322", "lastName": "Smith", "firstName": "Olivia", "classModels":["http://localhost:8080/class/5"}' http://localhost:8080/student
+curl -i -X POST -H "Content-Type:application/json" -d '{"studentId": "322", "lastName": "Smith", "firstName": "Olivia", "classModels":["http://localhost:8080/classes/5"}' http://localhost:8080/students
 HTTP/1.1 400 
 Content-Type: application/json;charset=UTF-8
 Transfer-Encoding: chunked
 Date: Fri, 05 Apr 2019 16:33:24 GMT
 Connection: close
 
-{"timestamp":"2019-04-05T16:33:24.388+0000","status":400,"error":"Bad Request","message":"Please check your request","path":"/student"}
+{"timestamp":"2019-04-05T16:33:24.388+0000","status":400,"error":"Bad Request","message":"Please check your request","path":"/students"}
 ~~~~
 
 ### Unit tests
@@ -65,50 +67,50 @@ With maven
 ```$ mvn spring-boot:run ```
 #### Retrieve all data from student and class
 ~~~~
-$ curl http://localhost:8080/student
-$ curl http://localhost:8080/class
+$ curl http://localhost:8080/students
+$ curl http://localhost:8080/classes
 ~~~~
 
 #### Create a new student and assign it to a previously created class
 ~~~~
-$ curl -i -X POST -H "Content-Type:application/json" -d '{"studentId": "322", "lastName": "Smith", "firstName": "Olivia", "classModels":["http://localhost:8080/class/5"]}' http://localhost:8080/student
+$ curl -i -X POST -H "Content-Type:application/json" -d '{"studentId": "322", "lastName": "Smith", "firstName": "Olivia", "classModels":["http://localhost:8080/classes/5"]}' http://localhost:8080/students
 ~~~~
 
 #### Delete a student
 ~~~~
-$ curl -X "DELETE" http://localhost:8080/student/1
+$ curl -X "DELETE" http://localhost:8080/students/1
 ~~~~
 
 #### Search students or classes using some of its parameters
 ~~~~
-$ curl http://localhost:8080/student/search/
+$ curl http://localhost:8080/students/search/
 {
   "_links" : {
     "findByLastName" : {
-      "href" : "http://localhost:8080/student/search/findByLastName{?lastName}",
+      "href" : "http://localhost:8080/students/search/findByLastName{?lastName}",
       "templated" : true
     },
     "findByFirstName" : {
-      "href" : "http://localhost:8080/student/search/findByFirstName{?firstName}",
+      "href" : "http://localhost:8080/students/search/findByFirstName{?firstName}",
       "templated" : true
     },
     "findByStudentId" : {
-      "href" : "http://localhost:8080/student/search/findByStudentId{?studentId}",
+      "href" : "http://localhost:8080/students/search/findByStudentId{?studentId}",
       "templated" : true
     },
     "self" : {
-      "href" : "http://localhost:8080/student/search/"
+      "href" : "http://localhost:8080/students/search/"
     }
   }
 }
 ~~~~
 
 ~~~~
-$ curl http://localhost:8080/class/search/
+$ curl http://localhost:8080/classes/search/
 ~~~~
 Search students by the last name
 ~~~~
-$ curl http://localhost:8080/student/search/findByLastName?lastName=Smith
+$ curl http://localhost:8080/students/search/findByLastName?lastName=Smith
 {
   "_embedded" : {
     "student" : [ {
@@ -117,13 +119,13 @@ $ curl http://localhost:8080/student/search/findByLastName?lastName=Smith
       "firstName" : "John",
       "_links" : {
         "self" : {
-          "href" : "http://localhost:8080/student/1"
+          "href" : "http://localhost:8080/students/1"
         },
         "student" : {
-          "href" : "http://localhost:8080/student/1"
+          "href" : "http://localhost:8080/students/1"
         },
         "classModels" : {
-          "href" : "http://localhost:8080/student/1/classModels"
+          "href" : "http://localhost:8080/students/1/classModels"
         }
       }
     }, {
@@ -136,16 +138,16 @@ $ curl http://localhost:8080/student/search/findByLastName?lastName=Smith
 
 #### Get all students for a specified class
 ~~~~
-$ curl http://localhost:8080/class/2/students
+$ curl http://localhost:8080/classes/2/students
 ~~~~
 
 #### Get all classes for a specified student
 ~~~~
-$ curl http://localhost:8080/student/1/classModels
+$ curl http://localhost:8080/students/1/classModels
 ~~~~
 
 #### Edit an already created class
 ~~~~
-$ curl -H 'Content-Type: application/json' -X PUT -d '{"code" : "CAL111", "title" : "A description 11", "description" : "Calculus 111"}' http://localhost:8080/class/2
+$ curl -H 'Content-Type: application/json' -X PUT -d '{"code" : "CAL111", "title" : "A description 11", "description" : "Calculus 111"}' http://localhost:8080/classes/2
 ~~~~
 
